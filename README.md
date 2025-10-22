@@ -73,25 +73,26 @@ Dự án được phát triển theo mô hình SDLC (Waterfall), có đầy đ�
 Bạn có thể clone hoặc tải dự án về:
 
 ```bash
-git clone https://github.com/<tên-người-dùng>/Wacth_shop.git
+git clone https://github.com/<tên-người-dùng>/culuho.git
+
 ```
 #### 2🗃️ Tạo cơ sở dữ liệu
 ##### Truy cập phpMyAdmin hoặc dùng dòng lệnh MySQL
      Tạo database mới, ví dụ:
  
-     CREATE DATABASE watchshop;
+     CREATE DATABASE ecommerce_closthes;;
 
 ##### Sau đó import file SQL:
  
-     Từ phpMyAdmin → Import → chọn file: database/shop_db.sql
+     Từ phpMyAdmin → Import → chọn file: database/ecommerce_closthes.sql
 #### 3⚙️ Cấu hình kết nối cơ sở dữ liệu
 ##### Mở file cấu hình:
     config/config.php
 
 ##### Sửa thông tin kết nối như sau:
-     $host = 'localhost';
+     $host = '127.0.0.1';
    
-     $dbname = 'shop_db';
+     $dbname = 'ecommerce_closthes';
    
      $user = 'root';
    
@@ -100,10 +101,7 @@ git clone https://github.com/<tên-người-dùng>/Wacth_shop.git
      $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
 #### 4. 🚀 Chạy ứng dụng
 ##### Nếu dùng XAMPP → truy cập:
-     http://localhost/Wacth_shop/home.php
-
-##### Nếu dùng Laragon → có thể tạo tên miền ảo:
-     http://watchshop.test
+    http://localhost/culuho/home.php
 
 ###### ✅ Giao diện sẽ hiển thị trang chính, bạn có thể:
 ###### - Đăng ký tài khoản người dùng
@@ -113,5 +111,5 @@ git clone https://github.com/<tên-người-dùng>/Wacth_shop.git
 ##### - Vào trang đăng nhập.
 ##### - Tích vào dòng "Đăng nhập như admin".
 ##### - Đăng nhập theo tài khoản sau:
-######    . account: test@gmail.com
+######    . account: admin@gmail.com
 ######    . password: 123456
